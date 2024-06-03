@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Text, View, TextInput, Button, FlatList, StyleSheet, TouchableOpacity, Image } from 'react-native';
 import { create } from 'zustand';
-import mat from '../../assets/images/mat.jpg';
+import LYLY from './assets/LYLY.jpg';
 
 const useStore = create((set) => ({
   todos: [],
@@ -25,7 +25,7 @@ const App = () => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Image source={mat} style={styles.logoheader} />
+        <Image source={LYLY} style={styles.logoheader} />
         <Text style={styles.headerText}> My Todo List</Text>
       </View>
       <View style={styles.inputContainer}>
@@ -66,7 +66,7 @@ const App = () => {
         keyExtractor={(item, index) => index.toString()}
       />
       <Text style={styles.text}>
-        "Rahmat Libayao, 20191830, IT35C-IT83, App Dev & emerg. tech., BSIT, 2023-24"
+        "Beverly Jane L. Javier, 20211364, IT35C-IT83, App Dev & emerg. tech., BSIT, 2023-2024"
       </Text>
     </View>
   );
@@ -75,10 +75,10 @@ const App = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'grey',
+    backgroundColor: '#f5f5f5',
   },
   header: {
-    flexDirection: 'center',
+    flexDirection: 'row',
     alignItems: 'center',
     backgroundColor: '#666',
     paddingTop: 40,
@@ -110,7 +110,7 @@ const styles = StyleSheet.create({
     color: '#333',
   },
   addButton: {
-    backgroundColor: 'black',
+    backgroundColor: '#008080',
     paddingVertical: 10,
     paddingHorizontal: 20,
     borderRadius: 20,
